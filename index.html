@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Emre Detailing | Bursa Automotive Studio</title>
+<meta name="description" content="Emre Detailing için hazırlanmış premium otomotiv web sitesi tasarım önizlemesi.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#060708;
+  --panel:#0c0e10;
+  --panel2:#111417;
+  --white:#f3f5f4;
+  --muted:#8b9297;
+  --silver:#c9d0d3;
+  --ice:#a7f3ff;
+  --line:rgba(255,255,255,.11);
+  --max:1280px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:Inter,sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+::selection{
+  background:var(--ice);
+  color:#000;
+}
+
+.container{
+  width:min(var(--max),calc(100% - 44px));
+  margin:auto;
+}
+
+/* NAV */
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  height:76px;
+  background:rgba(6,7,8,.78);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+  width:min(var(--max),calc(100% - 44px));
+  height:100%;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:-.5px;
+}
+
+.logo small{
+  display:block;
+  color:var(--ice);
+  font-family:Inter,sans-serif;
+  font-size:8px;
+  letter-spacing:3px;
+  margin-top:2px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:27px;
+  font-size:11px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+}
+
+.nav-links>a:not(.nav-button){
+  opacity:.7;
+  transition:.2s;
+}
+
+.nav-links>a:hover{
+  opacity:1;
+  color:var(--ice);
+}
+
+.nav-button{
+  border:1px solid var(--ice);
+  padding:12px 17px;
+  color:var(--ice);
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  padding-top:76px;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(5,6,7,.97) 0%,rgba(5,6,7,.68) 46%,rgba(5,6,7,.18) 100%),
+    linear-gradient(0deg,#060708 0%,transparent 42%),
+    url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=2000&q=88")
+    center/cover;
+  transform:scale(1.03);
+}
+
+.hero-grid{
+  position:absolute;
+  inset:0;
+  opacity:.12;
+  background-image:
+    linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px);
+  background-size:70px 70px;
+  mask-image:linear-gradient(to right,black,transparent 80%);
+}
+
+.hero-content{
+  width:min(var(--max),calc(100% - 44px));
+  margin:auto;
+  position:relative;
+  z-index:2;
+  padding:100px 0 78px;
+}
+
+.micro{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--ice);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:10px;
+  font-weight:700;
+  margin-bottom:26px;
+}
+
+.micro::before{
+  content:"";
+  width:38px;
+  height:1px;
+  background:var(--ice);
+}
+
+.hero h1{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:clamp(65px,11vw,145px);
+  line-height:.82;
+  letter-spacing:-7px;
+  max-width:1100px;
+}
+
+.hero h1 span{
+  color:transparent;
+  -webkit-text-stroke:1px rgba(255,255,255,.65);
+}
+
+.hero-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:50px;
+  margin-top:52px;
+}
+
+.hero-copy{
+  max-width:570px;
+  color:#b2b7ba;
+  font-size:15px;
+  line-height:1.8;
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  min-height:54px;
+  padding:0 23px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--line);
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  font-size:11px;
+  font-weight:700;
+  transition:.25s;
+}
+
+.btn-main{
+  background:var(--ice);
+  border-color:var(--ice);
+  color:#050607;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+.btn-main:hover{
+  background:#fff;
+  border-color:#fff;
+}
+
+.btn-outline:hover{
+  color:var(--ice);
+  border-color:var(--ice);
+}
+
+/* STATUS */
+
+.status{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:#080a0b;
+}
+
+.status-inner{
+  width:min(var(--max),calc(100% - 44px));
+  margin:auto;
+  min-height:72px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.status-item{
+  border-right:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:0 22px;
+  color:#80878b;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+.status-item:last-child{
+  border-right:0;
+}
+
+.dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--ice);
+  box-shadow:0 0 15px var(--ice);
+}
+
+/* SECTIONS */
+
+section{
+  padding:120px 0;
+}
+
+.section-head{
+  display:grid;
+  grid-template-columns:.55fr 1.45fr;
+  gap:70px;
+  margin-bottom:68px;
+}
+
+.section-no{
+  color:var(--ice);
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+h2{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:clamp(44px,6.5vw,84px);
+  line-height:.92;
+  letter-spacing:-4px;
+}
+
+.section-description{
+  max-width:610px;
+  color:var(--muted);
+  line-height:1.8;
+  margin-top:24px;
+}
+
+/* INTRO */
+
+.intro{
+  background:#090b0c;
+}
+
+.intro-layout{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:12px;
+}
+
+.intro-card{
+  border:1px solid var(--line);
+  background:var(--panel);
+  min-height:600px;
+  padding:38px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.intro-card strong{
+  color:var(--ice);
+  font-family:"Space Grotesk";
+  font-size:52px;
+}
+
+.intro-card h3{
+  font-family:"Space Grotesk";
+  font-size:34px;
+  letter-spacing:-1.5px;
+  margin-bottom:18px;
+}
+
+.intro-card p{
+  color:var(--muted);
+  line-height:1.8;
+  font-size:14px;
+}
+
+.intro-photo{
+  min-height:600px;
+  position:relative;
+  overflow:hidden;
+}
+
+.intro-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.7s;
+}
+
+.intro-photo:hover img{
+  transform:scale(1.04);
+}
+
+.photo-label{
+  position:absolute;
+  left:20px;
+  bottom:20px;
+  background:rgba(5,6,7,.78);
+  backdrop-filter:blur(12px);
+  border:1px solid var(--line);
+  padding:13px 16px;
+  color:#bfc4c6;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:9px;
+}
+
+/* SERVICES */
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.service{
+  min-height:335px;
+  border:1px solid var(--line);
+  background:linear-gradient(145deg,#0e1113,#08090a);
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:.3s;
+}
+
+.service:hover{
+  border-color:rgba(167,243,255,.55);
+  transform:translateY(-4px);
+}
+
+.service-top{
+  display:flex;
+  justify-content:space-between;
+  color:var(--ice);
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.service h3{
+  font-family:"Space Grotesk";
+  font-size:31px;
+  letter-spacing:-1.5px;
+  margin-bottom:15px;
+}
+
+.service p{
+  max-width:490px;
+  color:var(--muted);
+  line-height:1.75;
+  font-size:14px;
+}
+
+/* PPF FEATURE */
+
+.ppf{
+  min-height:760px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(4,5,6,.96),rgba(4,5,6,.25)),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=88")
+    center/cover;
+}
+
+.ppf-content{
+  max-width:790px;
+}
+
+.ppf p{
+  max-width:580px;
+  color:#c0c5c7;
+  line-height:1.8;
+  margin:28px 0;
+}
+
+/* GALLERY */
+
+.gallery{
+  background:#090b0c;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:1.25fr .75fr .75fr;
+  grid-auto-rows:310px;
+  gap:10px;
+}
+
+.gallery-item{
+  position:relative;
+  overflow:hidden;
+}
+
+.gallery-item:first-child{
+  grid-row:span 2;
+}
+
+.gallery-item:nth-child(4){
+  grid-column:span 2;
+}
+
+.gallery-item img{
+  height:100%;
+  object-fit:cover;
+  filter:grayscale(30%);
+  transition:.6s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.05);
+  filter:grayscale(0);
+}
+
+/* PROCESS */
+
+.process{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--line);
+}
+
+.step{
+  min-height:315px;
+  padding:30px 25px;
+  border-right:1px solid var(--line);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.step:last-child{
+  border-right:0;
+}
+
+.step-number{
+  color:var(--ice);
+  font-family:"Space Grotesk";
+  font-size:42px;
+}
+
+.step h3{
+  font-family:"Space Grotesk";
+  font-size:22px;
+  margin-bottom:11px;
+}
+
+.step p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+
+/* CTA */
+
+.cta{
+  background:var(--ice);
+  color:#040506;
+}
+
+.cta-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:40px;
+}
+
+.cta h2{
+  max-width:850px;
+}
+
+.cta .btn{
+  color:#000;
+  border-color:#000;
+  min-width:210px;
+}
+
+.cta .btn:hover{
+  background:#000;
+  color:#fff;
+}
+
+/* CONTACT */
+
+.contact{
+  background:#070809;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+}
+
+.contact-copy p{
+  color:var(--muted);
+  max-width:520px;
+  line-height:1.8;
+  margin-top:25px;
+}
+
+.contact-list{
+  display:grid;
+  gap:10px;
+}
+
+.contact-card{
+  min-height:90px;
+  border:1px solid var(--line);
+  padding:22px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:.25s;
+}
+
+.contact-card:hover{
+  border-color:var(--ice);
+  background:#0d1012;
+}
+
+.contact-card small{
+  display:block;
+  color:#70777b;
+  text-transform:uppercase;
+  letter-spacing:1.7px;
+  font-size:9px;
+  margin-bottom:8px;
+}
+
+.contact-card strong{
+  font-size:16px;
+}
+
+.arrow{
+  color:var(--ice);
+  font-size:23px;
+}
+
+/* DISCLAIMER */
+
+.preview{
+  padding:27px 20px;
+  text-align:center;
+  border-top:1px solid var(--line);
+  background:#040505;
+  color:#747a7e;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.preview strong{
+  color:#d4d8d9;
+  letter-spacing:1px;
+}
+
+/* FOOTER */
+
+footer{
+  padding:34px 0;
+  border-top:1px solid var(--line);
+}
+
+.footer{
+  width:min(var(--max),calc(100% - 44px));
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  color:#686e72;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.footer-logo{
+  color:#fff;
+  font-family:"Space Grotesk";
+  font-weight:700;
+}
+
+.footer-logo span{
+  color:var(--ice);
+}
+
+/* REVEAL */
+
+.reveal{
+  opacity:0;
+  transform:translateY(30px);
+  transition:.75s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+
+.mobile-bar{
+  display:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .nav-links>a:not(.nav-button){
+    display:none;
+  }
+
+  .section-head,
+  .intro-layout,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .process{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .step:nth-child(2){
+    border-right:0;
+  }
+
+  .step{
+    border-bottom:1px solid var(--line);
+  }
+
+  .hero-bottom,
+  .cta-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .status-inner{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .status-item{
+    min-height:60px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .gallery-item:first-child{
+    grid-column:span 2;
+  }
+
+  .gallery-item:nth-child(4){
+    grid-column:auto;
+  }
+}
+
+@media(max-width:600px){
+
+  body{
+    padding-bottom:66px;
+  }
+
+  nav{
+    height:68px;
+  }
+
+  .container,
+  .nav-inner,
+  .hero-content,
+  .status-inner{
+    width:calc(100% - 28px);
+  }
+
+  .hero h1{
+    font-size:clamp(58px,18vw,90px);
+    letter-spacing:-4px;
+  }
+
+  .hero-content{
+    padding-bottom:55px;
+  }
+
+  section{
+    padding:82px 0;
+  }
+
+  .actions,
+  .actions .btn{
+    width:100%;
+  }
+
+  .intro-card,
+  .intro-photo{
+    min-height:430px;
+  }
+
+  .status-inner{
+    grid-template-columns:1fr;
+  }
+
+  .status-item{
+    border-right:0;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+    grid-auto-rows:290px;
+  }
+
+  .gallery-item:first-child,
+  .gallery-item:nth-child(4){
+    grid-column:auto;
+    grid-row:auto;
+  }
+
+  .process{
+    grid-template-columns:1fr;
+  }
+
+  .step{
+    border-right:0;
+  }
+
+  .footer{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .mobile-bar{
+    display:grid;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:66px;
+    grid-template-columns:1fr 1fr;
+    z-index:1200;
+    background:#050607;
+    border-top:1px solid var(--line);
+  }
+
+  .mobile-bar a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-transform:uppercase;
+    font-size:11px;
+    font-weight:700;
+  }
+
+  .mobile-bar a:first-child{
+    background:var(--ice);
+    color:#000;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-inner">
+
+  <a href="#home" class="logo">
+    EMRE DETAILING
+    <small>AUTOMOTIVE STUDIO</small>
+  </a>
+
+  <div class="nav-links">
+    <a href="#studio">Stüdyo</a>
+    <a href="#services">Hizmetler</a>
+    <a href="#works">Çalışmalar</a>
+    <a href="#contact">İletişim</a>
+
+    <a href="tel:+905344355607" class="nav-button">
+      Bize Ulaşın
+    </a>
+  </div>
+
+</div>
+</nav>
+
+<header class="hero" id="home">
+
+<div class="hero-bg"></div>
+<div class="hero-grid"></div>
+
+<div class="hero-content">
+
+  <div class="micro">
+    Osmangazi · Bursa
+  </div>
+
+  <h1>
+    PROTECT.<br>
+    PERFECT.<br>
+    <span>PRESERVE.</span>
+  </h1>
+
+  <div class="hero-bottom">
+
+    <p class="hero-copy">
+      Emre Detailing için hazırlanan premium otomotiv web deneyimi.
+      Yapılan araç çalışmalarını güçlü bir görsel kimlikle sunmak,
+      hizmetleri tek noktada göstermek ve müşterilerin işletmeye
+      kolayca ulaşmasını sağlamak üzere tasarlandı.
+    </p>
+
+    <div class="actions">
+
+      <a href="#works" class="btn btn-main">
+        Çalışmaları İncele →
+      </a>
+
+      <a href="#contact" class="btn btn-outline">
+        İletişim
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+</header>
+
+<div class="status">
+<div class="status-inner">
+
+  <div class="status-item">
+    <span class="dot"></span>
+    Automotive Studio
+  </div>
+
+  <div class="status-item">
+    <span class="dot"></span>
+    Bursa
+  </div>
+
+  <div class="status-item">
+    <span class="dot"></span>
+    Precision
+  </div>
+
+  <div class="status-item">
+    <span class="dot"></span>
+    Premium Experience
+  </div>
+
+</div>
+</div>
+
+<section class="intro" id="studio">
+<div class="container">
+
+<div class="section-head reveal">
+
+  <div class="section-no">
+    01 / Studio
+  </div>
+
+  <div>
+    <h2>
+      OTOMOBİLİNİZ<br>
+      BİR DETAYDAN FAZLASI.
+    </h2>
+
+    <p class="section-description">
+      Emre Detailing'in çalışmalarını daha güçlü ve profesyonel bir
+      dijital kimlikle sunabilmesi için hazırlanmış modern web konsepti.
+      Nihai sürüm işletmenin gerçek içerikleriyle tamamen özelleştirilebilir.
+    </p>
+  </div>
+
+</div>
+
+<div class="intro-layout reveal">
+
+  <div class="intro-card">
+
+    <strong>01.</strong>
+
+    <div>
+      <h3>Precision First.</h3>
+
+      <p>
+        Araç bakımında uygulama kadar sunum da önemlidir.
+        Bu alan işletmenin yaklaşımını, çalışma prensibini ve
+        müşteriye sunduğu deneyimi anlatmak için kullanılabilir.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="intro-photo">
+
+    <img
+      src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1500&q=88"
+      alt="Temsili premium otomobil">
+
+    <div class="photo-label">
+      Automotive / Protection / Detail
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+
+<div class="section-head reveal">
+
+  <div class="section-no">
+    02 / Hizmet Alanları
+  </div>
+
+  <div>
+    <h2>
+      KORUMA.<br>
+      DETAY. SONUÇ.
+    </h2>
+
+    <p class="section-description">
+      Bu alanlar tasarım önizlemesi için hazırlanmıştır.
+      Birlikte ilerlenmesi hâlinde Emre Detailing'in doğruladığı
+      güncel hizmetler, paketler ve uygulama detayları buraya işlenebilir.
+    </p>
+  </div>
+
+</div>
+
+<div class="service-grid reveal">
+
+  <article class="service">
+
+    <div class="service-top">
+      <span>01</span>
+      <span>Protection</span>
+    </div>
+
+    <div>
+      <h3>PPF / Koruma Alanı</h3>
+
+      <p>
+        İşletmenin sunduğu doğrulanmış araç koruma uygulamalarının,
+        süreçlerinin ve örnek çalışmalarının sunulabileceği bölüm.
+      </p>
+    </div>
+
+  </article>
+
+  <article class="service">
+
+    <div class="service-top">
+      <span>02</span>
+      <span>Exterior</span>
+    </div>
+
+    <div>
+      <h3>Dış Detay Alanı</h3>
+
+      <p>
+        Araç dış görünümüne yönelik güncel uygulamaların
+        profesyonel fotoğraf ve açıklamalarla gösterilebileceği alan.
+      </p>
+    </div>
+
+  </article>
+
+  <article class="service">
+
+    <div class="service-top">
+      <span>03</span>
+      <span>Interior</span>
+    </div>
+
+    <div>
+      <h3>İç Detay Alanı</h3>
+
+      <p>
+        İşletmenin doğruladığı iç mekân bakım ve detay çalışmalarının
+        müşterilere düzenli biçimde sunulabileceği bölüm.
+      </p>
+    </div>
+
+  </article>
+
+  <article class="service">
+
+    <div class="service-top">
+      <span>04</span>
+      <span>Custom</span>
+    </div>
+
+    <div>
+      <h3>Özel Uygulamalar</h3>
+
+      <p>
+        Güncel paketler, özel araç projeleri veya işletmeye özgü
+        uygulamalar için tamamen özelleştirilebilir içerik alanı.
+      </p>
+    </div>
+
+  </article>
+
+</div>
+
+</div>
+</section>
+
+<section class="ppf">
+
+<div class="container">
+
+  <div class="ppf-content reveal">
+
+    <div class="micro">
+      Automotive Protection
+    </div>
+
+    <h2>
+      GÖRÜNÜMÜ<br>
+      KORUYAN DETAY.
+    </h2>
+
+    <p>
+      Gerçek Emre Detailing araç fotoğrafları eklendiğinde bu bölüm,
+      müşterilerin uygulama kalitesini ve sonuçları büyük görseller
+      üzerinden inceleyebileceği premium bir dijital showrooma dönüşebilir.
+    </p>
+
+    <a href="#works" class="btn btn-main">
+      Showroom →
+    </a>
+
+  </div>
+
+</div>
+
+</section>
+
+<section class="gallery" id="works">
+<div class="container">
+
+<div class="section-head reveal">
+
+  <div class="section-no">
+    03 / Portfolio
+  </div>
+
+  <div>
+    <h2>
+      İŞÇİLİK<br>
+      KONUŞSUN.
+    </h2>
+
+    <p class="section-description">
+      Önizlemede kullanılan araç fotoğrafları temsilîdir.
+      Nihai projede bu alan Emre Detailing'in izin verilen gerçek
+      çalışmalarının sergilendiği portföye dönüştürülebilir.
+    </p>
+  </div>
+
+</div>
+
+<div class="gallery-grid reveal">
+
+  <div class="gallery-item">
+    <img
+      src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1500&q=88"
+      alt="Temsili otomobil">
+  </div>
+
+  <div class="gallery-item">
+    <img
+      src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=88"
+      alt="Temsili otomobil">
+  </div>
+
+  <div class="gallery-item">
+    <img
+      src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=88"
+      alt="Temsili otomobil">
+  </div>
+
+  <div class="gallery-item">
+    <img
+      src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1300&q=88"
+      alt="Temsili otomobil">
+  </div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="section-head reveal">
+
+  <div class="section-no">
+    04 / Customer Flow
+  </div>
+
+  <div>
+    <h2>
+      DİJİTALDEN<br>
+      İŞLETMEYE.
+    </h2>
+  </div>
+
+</div>
+
+<div class="process reveal">
+
+  <div class="step">
+    <div class="step-number">01</div>
+
+    <div>
+      <h3>Keşfet</h3>
+      <p>
+        Müşteri işletmeyi modern ve profesyonel bir web sitesiyle tanır.
+      </p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">02</div>
+
+    <div>
+      <h3>İncele</h3>
+      <p>
+        Güncel hizmetleri ve gerçek araç çalışmalarını tek noktada inceler.
+      </p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">03</div>
+
+    <div>
+      <h3>Güven</h3>
+      <p>
+        İşletmenin gerçek çalışmalarını görerek hizmet hakkında bilgi edinir.
+      </p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">04</div>
+
+    <div>
+      <h3>Ulaş</h3>
+      <p>
+        Telefon ve konum bağlantıları üzerinden işletmeye kolayca ulaşır.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+  <div class="cta-inner reveal">
+
+    <h2>
+      PRECISION<br>
+      MEETS PROTECTION.
+    </h2>
+
+    <a href="tel:+905344355607" class="btn">
+      Telefonla Ulaş →
+    </a>
+
+  </div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+
+<div class="contact-grid">
+
+  <div class="contact-copy reveal">
+
+    <div class="section-no">
+      05 / İletişim
+    </div>
+
+    <h2>
+      EMRE<br>
+      DETAILING.
+    </h2>
+
+    <p>
+      Emre Detailing için hazırlanmış bağımsız web sitesi tasarım konsepti.
+      Birlikte ilerlenmesi hâlinde gerçek işletme ve araç fotoğrafları,
+      doğrulanmış güncel hizmetler ve marka bilgileriyle tamamlanabilir.
+    </p>
+
+  </div>
+
+  <div class="contact-list reveal">
+
+    <a href="tel:+905344355607" class="contact-card">
+
+      <div>
+        <small>Telefon</small>
+        <strong>0534 435 56 07</strong>
+      </div>
+
+      <div class="arrow">↗</div>
+
+    </a>
+
+    <div class="contact-card">
+
+      <div>
+        <small>Bölge</small>
+        <strong>Osmangazi · Bursa</strong>
+      </div>
+
+      <div class="arrow">•</div>
+
+    </div>
+
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Emre+Detailing+PPF+Kaplama+Bursa"
+      target="_blank"
+      rel="noopener"
+      class="contact-card">
+
+      <div>
+        <small>Harita</small>
+        <strong>Yol Tarifi Al</strong>
+      </div>
+
+      <div class="arrow">↗</div>
+
+    </a>
+
+  </div>
+
+</div>
+
+</div>
+</section>
+
+<div class="preview">
+
+<strong>WEB SİTESİ TASARIM ÖNİZLEMESİ</strong><br>
+
+Bu çalışma Emre Detailing için hazırlanmış bağımsız bir tasarım konseptidir
+ve işletmenin resmî web sitesi değildir. Kullanılan otomotiv görselleri
+temsilîdir. Nihai hizmetler, görseller ve işletme bilgileri işletme
+onayıyla güncellenebilir.
+
+</div>
+
+<footer>
+
+<div class="footer">
+
+  <div class="footer-logo">
+    EMRE <span>DETAILING</span>
+  </div>
+
+  <div>OSMANGAZİ · BURSA</div>
+
+  <div>DESIGN PREVIEW</div>
+
+</div>
+
+</footer>
+
+<div class="mobile-bar">
+
+  <a href="tel:+905344355607">
+    Ara
+  </a>
+
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=Emre+Detailing+PPF+Kaplama+Bursa"
+    target="_blank"
+    rel="noopener">
+    Konum
+  </a>
+
+</div>
+
+<script>
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{
+  threshold:.12
+});
+
+document.querySelectorAll(".reveal").forEach(el=>{
+  observer.observe(el);
+});
+
+const heroBg=document.querySelector(".hero-bg");
+
+window.addEventListener("scroll",()=>{
+  if(window.innerWidth>768){
+    heroBg.style.transform=
+      `scale(1.03) translateY(${window.scrollY*.06}px)`;
+  }
+});
+
+</script>
+
+</body>
+</html>
